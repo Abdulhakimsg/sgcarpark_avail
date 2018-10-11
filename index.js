@@ -16,12 +16,19 @@ app.set('views', __dirname + '/views');
 app.set('view engine', 'jsx');
 app.use(express.static('public'));
 
-//URL
-var url = 'https://jsonplaceholder.typicode.com/todos/1'
+//URL + authenticate with api link
+var link = {
+    url: 'http://datamall2.mytransport.sg/ltaodataservice/CarParkAvailabilityv2',
+    headers: {
+      'AccountKey': 'ufFaZx5sS7uB2yyedGcRsA==',
+      'accept' : 'application/json'
+    }
+  };
+
 
 app.get('/results',function(req,res){
 
-    request(url,function(error,response,body){
+    request(link,function(error,response,body){
 
         file_json = JSON.parse(body);
         console.log(file_json);
