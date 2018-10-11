@@ -9,8 +9,8 @@ class Layout extends React.Component {
 			<title>{this.props.title}</title>
 		</head>
 		<body>
-			<div class = "w3-container">
-			<span class="major">Major part</span>
+			<div className = "w3-container">
+			<span className="major">Major part</span>
 			</div>
 			{this.props.children}
 		</body>
