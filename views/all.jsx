@@ -6,8 +6,7 @@ class Results extends React.Component {
     return (
       <Layout title="Hakim">
 			<div>
-			<h1>Results will be displayed here</h1>
-            <h1>{this.props.name}</h1>
+			<h1>This is page where all the results will be displayed in console</h1>
 			</div>
 			</Layout>
     );
