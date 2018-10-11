@@ -1,15 +1,15 @@
 module.exports = (app) => {
 
     //to link to controller folder
-    const home = require('./controller/home')();
-    const all = require('./controller/all')();
-    const results = require('./controller/results')();
+    const useApi = require('./controller/useApi')();
+    // const all = require('./controller/all')();
+
 
 
     //ROUTES
-    app.get('/', home.callback)
-    app.post('/results',results.callback)
-    app.get('/all',all.callback)
+    app.get('/result', useApi.resultPage);
+    app.get('/all', useApi.showAll);
+    app.get('/', useApi.formPage);
     
     
 }

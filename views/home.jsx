@@ -6,10 +6,11 @@ class Home extends React.Component {
     return (
       <Layout title="Hakim">
 			<div>
-      <form action="/results" method="post"><br></br>
+      <form action="/result" method="get"><br></br>
       <input type="text" name="name" placeholder="Enter Street name"/><br></br>
       <input type="submit" value="Submit"/>
       </form>
+      <a href = "/all"><button>Show all</button></a>
 			<h1>{this.props.name}</h1>
 			</div>
 			</Layout>
