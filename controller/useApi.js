@@ -10,24 +10,29 @@ var link = {
     }
     };
 
+
+
 module.exports = () => {
 
     //Server workings
     const formPage = (req, res) => {
         res.render('home', {name: "This is Landing Page"});
     };
-      
+    //By vehicle type & Street Nam e
     const resultPage = (req, res) => {
         if(req.query.name) {
 
             request(link,function(error,response,body) {
 
                 file_json = JSON.parse(body);
-                //console.log(file_json.value)
-                var filteredList = file_json.value.filter((element) => {
-                    return element.Development.includes(req.query.name.toUpperCase());
+                var type = file_json.value.filter((element) => {  
+                    return element.LotType.includes(req.query.type.toUpperCase());
+                    });
+            //    console.log(type);
+                var filteredList = type.filter((element) => {  
+                return element.Development.includes(req.query.name.toUpperCase());
                 });
-                console.log(filteredList);
+                // console.log(filteredList);
                 res.render('results', {list: filteredList});
             });            
             
@@ -35,7 +40,17 @@ module.exports = () => {
             res.redirect('/');
         }
     } ; 
+      
+    //Show by location
+    const locationPage = (req,res) =>{
+            
 
+          res.render('location');
+
+    }
+
+    
+    //Show all
     const showAll = (req, res) => {
 
         request(link,function(error,response,body) {
@@ -51,6 +66,7 @@ module.exports = () => {
     return {
         formPage,
         showAll,
-        resultPage
+        resultPage,
+        locationPage
     }     
 };

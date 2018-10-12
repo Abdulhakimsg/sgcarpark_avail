@@ -9,7 +9,7 @@ class All extends React.Component {
       <h1>{element.CarParkID}</h1>
       {/* <h3>{element.Area}</h3> */}
       <h3>{element.Development}</h3>
-      {/* <h3>{element.Location}</h3> */}
+      <h3>{element.Location}</h3>
       <h3>{element.AvailableLots}</h3>
       <h3>{element.LotType}</h3>
       {/* <h3>{element.Agency}</h3> */}

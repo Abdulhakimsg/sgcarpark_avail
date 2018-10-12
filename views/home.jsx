@@ -8,11 +8,17 @@ class Home extends React.Component {
 			<div>
       <form action="/result" method="get"><br></br>
       <input type="text" name="name" placeholder="Enter Street name"/><br></br>
+      <input type="radio" name="type" value="Y" defaultChecked />
+        <label htmlFor="motor">MOTORBIKE</label>
+      <input type="radio" name="type" value="C" />
+        <label htmlFor="car">CAR</label><br></br>
       <input type="submit" value="Submit"/>
       </form>
+      <button id="locationButton">Near me</button><br></br>
       <a href = "/all"><button>Show all</button></a>
 			<h1>{this.props.name}</h1>
 			</div>
+      <script  type="text/javascript" src="/script.js"></script>
 			</Layout>
     );
   }
