@@ -41,10 +41,10 @@ module.exports = () => {
         }
     } ; 
       
-    //Show by location
+    // Show by location
     const locationPage = (req,res) =>{
-            
 
+        
           res.render('location');
 
     }
@@ -66,7 +66,7 @@ module.exports = () => {
     return {
         formPage,
         showAll,
-        resultPage,
-        locationPage
+        resultPage
+        // locationPage
     }     
 };

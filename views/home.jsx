@@ -18,7 +18,7 @@ class Home extends React.Component {
       <a href = "/all"><button>Show all</button></a>
 			<h1>{this.props.name}</h1>
 			</div>
-      <script  type="text/javascript" src="/script.js"></script>
+      <script  type="text/javascript" src = "/script.js"></script>
 			</Layout>
     );
   }

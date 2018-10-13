@@ -7,7 +7,7 @@ module.exports = (app) => {
     app.get('/result', useApi.resultPage);
     app.get('/all', useApi.showAll);
     app.get('/', useApi.formPage);
-    app.get('/location', useApi.locationPage);
+    // app.get('/location', useApi.locationPage);
     
     
 }
