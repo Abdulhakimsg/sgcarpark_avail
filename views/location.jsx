@@ -4,8 +4,6 @@ var Layout = require('./components/layout');
 class Location extends React.Component {
   render() {
 
-        
-
     return (
       <Layout title="Hakim">
 			<div>

@@ -3,6 +3,7 @@ var Layout = require('./components/layout');
 
 class Home extends React.Component {
   render() {
+
     return (
       <Layout title="Hakim">
 			<div>
@@ -14,11 +15,11 @@ class Home extends React.Component {
         <label htmlFor="car">CAR</label><br></br>
       <input type="submit" value="Submit"/>
       </form>
-      <button id="locationButton">Near me</button><br></br>
+      <a href = "/location" id ='nearMe' >Near me</a><br></br>
       <a href = "/all"><button>Show all</button></a>
 			<h1>{this.props.name}</h1>
 			</div>
-      <script  type="text/javascript" src = "/script.js"></script>
+      <script  type="text/javascript" src = "/script2.js"></script>
 			</Layout>
     );
   }

@@ -6,6 +6,7 @@ class Results extends React.Component {
     let list = this.props.list.map((element) => {
       return <div key={this.props.list.indexOf(element)}>
       <h1>{element.CarParkID}</h1>
+      <h3>{element.Location}</h3>
       <h3>{element.Development}</h3>
       <h3>{element.AvailableLots}</h3>
       <h3>{element.LotType}</h3>

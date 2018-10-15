@@ -1,5 +1,3 @@
-var button = document.getElementById('locationButton').addEventListener('click', ()=> {
-    getLocation();
 
     function getLocation() {
         console.log('working');
@@ -14,16 +12,12 @@ var button = document.getElementById('locationButton').addEventListener('click',
         console.log(lat)
         console.log(lon)
 
+      let nearMe = document.querySelector('#nearMe')
+      var myLocation = `?lat=${lat}&lon=${lon}`
+      console.log(nearMe.href)
+      nearMe.href = nearMe.href + myLocation
+
+      
+
     }
-})
-
-// function getLocation() {
-//     if (navigator.geolocation) {
-//         navigator.geolocation.getCurrentPosition(showPosition);
-//     } 
-// }
-
-// function showPosition(position) {
-//     console.log(position.coords.latitude)
-//     console.log(position.coords.longitude)
-// }
+// })

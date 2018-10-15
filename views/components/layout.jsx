@@ -14,6 +14,7 @@ class Layout extends React.Component {
 			</div>
 			{this.props.children}
 		</body>
+		<script  type="text/javascript" src = "/script.js"></script>
 		</html>		
 	);
   }

@@ -10,8 +10,6 @@ var link = {
     }
     };
 
-
-
 module.exports = () => {
 
     //Server workings
@@ -32,7 +30,7 @@ module.exports = () => {
                 var filteredList = type.filter((element) => {  
                 return element.Development.includes(req.query.name.toUpperCase());
                 });
-                // console.log(filteredList);
+                console.log(filteredList);
                 res.render('results', {list: filteredList});
             });            
             
@@ -42,13 +40,12 @@ module.exports = () => {
     } ; 
       
     // Show by location
-    const locationPage = (req,res) =>{
+    const location = (req,res) =>{
+        console.log(req.query.lat);
+        console.log(req.query.lon)
 
-        
-          res.render('location');
-
+        res.render('location')
     }
-
     
     //Show all
     const showAll = (req, res) => {
@@ -56,8 +53,7 @@ module.exports = () => {
         request(link,function(error,response,body) {
 
             file_json = JSON.parse(body);
-            // console.log(file_json);
-    
+            console.log(file_json)
             res.render('all', {carpark: file_json});
         });
         
@@ -66,7 +62,7 @@ module.exports = () => {
     return {
         formPage,
         showAll,
-        resultPage
-        // locationPage
+        resultPage,
+        location
     }     
 };
