@@ -6,15 +6,16 @@ class Layout extends React.Component {
 		<html lang="en">
 		<head>
 			<link rel="stylesheet" type="text/css" href="/style.css"/>
+			<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossOrigin="anonymous"/>
 			<title>{this.props.title}</title>
 		</head>
 		<body>
-			<div className = "w3-container">
-			<span className="major">Singapore Carpark Availability Finder</span>
-			</div>
 			{this.props.children}
+			<footer className = "w3-container">
+			<span id="bigHeading">Find a Carpark!</span>
+			</footer>
 		</body>
-		<script  type="text/javascript" src = "/script.js"></script>
+		<script type="text/javascript" src = "/script2.js"></script>
 		</html>		
 	);
   }
@@ -22,7 +23,3 @@ class Layout extends React.Component {
 
 module.exports = Layout;
 
-<div class="w3-container w3-teal">
-  <h5>Footer</h5>
-  <p>Footer information goes here</p>
-</div>

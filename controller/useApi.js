@@ -15,14 +15,13 @@ module.exports = () => {
 
     //Server workings
     const formPage = (req, res) => {
-        res.render('home', {name: "This is Landing Page"});
+        res.render('home');
     };
     //By vehicle type & Street Nam e
     const resultPage = (req, res) => {
         if(req.query.name) {
 
             request(link,function(error,response,body) {
-
                 file_json = JSON.parse(body);
                 var type = file_json.value.filter((element) => {  
                     return element.LotType.includes(req.query.type.toUpperCase());
@@ -31,8 +30,8 @@ module.exports = () => {
                 var filteredList = type.filter((element) => {  
                 return element.Development.includes(req.query.name.toUpperCase());
                 });
-                console.log(filteredList);
-                res.render('results', {list: filteredList});
+                var numberList = filteredList.length
+                res.render('results', {list: filteredList,totalNumber: numberList});
             });            
             
         } else {
@@ -64,7 +63,7 @@ module.exports = () => {
             for(var i = 0;i<array.length;i++){
                 var testActual=array[i].Location
                 var valuesActual= testActual.split(" ")
-                let distActual = 0.5
+                let distActual = 1.5//miles
                 var answerActual = compare(coord[0],coord[1],valuesActual[0],valuesActual[1])
 
                 if(answerActual<distActual){

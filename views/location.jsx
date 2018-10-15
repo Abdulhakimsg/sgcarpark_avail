@@ -5,10 +5,10 @@ var Layout = require('./components/layout');
       let totalNumber = this.props.totalNumber
       let list = this.props.list.map((element) => {
         return <div key={this.props.list.indexOf(element)}>
-        <h3>{element.Location}</h3>
-        <h3>{element.Development}</h3>
-        <h3>{element.AvailableLots}</h3>
-        <h3>{element.LotType}</h3>
+        <h3 className ="eleLocation">{element.Development}</h3>
+        <h3 className ="eleLots">{element.AvailableLots}</h3>
+        <h3 className ="eleType">{element.LotType}</h3>
+        <br></br>
         <br></br>
         <br></br>
         </div>
@@ -16,9 +16,9 @@ var Layout = require('./components/layout');
   
       return (
         <Layout title="Hakim">
-        <div>
-        <h1>Results</h1>
-          <h1>Total Number Found: ${totalNumber}</h1>
+        <div className = 'all'>
+        <h1 className = "results">Results</h1>
+          <h1 className = "totalNumber">Carparks Found: {totalNumber}</h1>
           <h1>{list}</h1>
         </div>
         </Layout>

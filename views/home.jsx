@@ -1,28 +1,40 @@
-var React = require('react');
-var Layout = require('./components/layout');
+var React = require("react");
+var Layout = require("./components/layout" );
 
 class Home extends React.Component {
   render() {
-
     return (
-      <Layout title="Hakim">
-			<div>
-      <form action="/result" method="get"><br></br>
-      <input type="text" name="name" placeholder="Enter Street name"/><br></br>
-      <input type="radio" name="type" value="Y" defaultChecked />
-        <label htmlFor="motor">MOTORBIKE</label>
-      <input type="radio" name="type" value="C" />
-        <label htmlFor="car">CAR</label><br></br>
-      <input type="submit" value="Submit"/>
-      </form>
-      <a href = "/location" id ='nearMe' >Near me</a><br></br>
-      <a href = "/all"><button>Show all</button></a>
-			<h1>{this.props.name}</h1>
-			</div>
-      <script  type="text/javascript" src = "/script2.js"></script>
-			</Layout>
+      <Layout title="Hakim" >
+      <div class = 'mainframe'>
+      <h2 id="findDevice">Find by Device Location</h2>
+      
+       <a className="btn btn-success" id="nearMe" href="location">Near me</a>
+        <div>
+        <h2 id="findStreet" >Find by Street name & Vehicle Type</h2>
+        <form action="/result" method="get">
+            <input type="text" name="name" placeholder="Type Street name" id="typeStreet"/>
+            <input type="radio" name="type" value="C" class="circle" defaultChecked />
+            <label htmlFor="car" className="radio">CAR(C)</label>
+            <input type="radio" name="type" value="Y" class="circle" />
+            <label htmlFor="motor" className="radio">MOTORBIKE(Y)</label>
+            <input type="radio" name="type" value="H" class="circle" />
+            <label htmlFor="truck" className="radio">HEAVY(H)</label>
+            <input type="submit" value="Submit" className="btn btn-outline-primary" />
+          </form> 
+          </div>
+          {/* <h2>See All</h2>
+          <a href="/all"><button class="btn btn-outline-secondary">Show all</button> </a>  */}
+          <script type="text/javascript" src = "/script.js"></script>
+      </div>
+      </Layout>
     );
   }
 }
+        
+       
+      
 
 module.exports = Home;
+
+
+        

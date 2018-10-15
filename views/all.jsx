@@ -15,12 +15,13 @@ class All extends React.Component {
       {/* <h3>{element.Agency}</h3> */}
       <br></br>
       <br></br>
+      <br></br>
       </div>
     });
 
     return (
       <Layout title="Hakim">
-			<div>
+			<div class = 'all'>
 			{carpark}
 			</div>
 			</Layout>
