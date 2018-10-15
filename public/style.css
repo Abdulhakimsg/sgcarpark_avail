@@ -70,6 +70,8 @@ div.all{
 }
 
 h1.results{
+    -webkit-text-stroke: 0.2px black;
+    color:#53A451;
     font-size:8vw;
 }
 
