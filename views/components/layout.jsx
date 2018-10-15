@@ -5,17 +5,21 @@ class Layout extends React.Component {
 	return (
 		<html lang="en">
 		<head>
-			<link rel="stylesheet" type="text/css" href="/style.css"/>
 			<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossOrigin="anonymous"/>
-			<title>{this.props.title}</title>
+			<link rel="stylesheet" type="text/css" href="/style.css"/>
+			<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossOrigin="anonymous"/>
+<title>{this.props.title}</title>
 		</head>
 		<body>
+		<a href = "github.com/abdulhakimsg"><i class="fab fa-github-square fa-1x"></i></a>
+			<a href = "abdulhakimchi@gmail.com">	<i class="fas fa-at fa-1x"></i></a>
+			<a href = "linkedin.com/abdulhakimsg"><i class="fab fa-linkedin-in fa-1x"></i></a>
 			{this.props.children}
 			<footer className = "w3-container">
 			<span id="bigHeading">Find a Carpark!</span>
 			</footer>
+			<script type="text/javascript" src = "/script.js"></script>
 		</body>
-		<script type="text/javascript" src = "/script2.js"></script>
 		</html>		
 	);
   }

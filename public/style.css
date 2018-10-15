@@ -63,6 +63,7 @@ label.radio{
 }
 
 div.all{
+    text-align: left;
     margin-left:10vw;
     margin-right:10vw;
     margin-top:2vh;
@@ -94,6 +95,23 @@ h3.eleType{
     font-size:5vw;
 }
 
+i.fab.fa-github-square{
+    float:right;
+    padding-top:1vh;
+    margin-right:2vw;
+}
+
+i.fas.fa-at{
+    float:right;
+    padding-top:1vh;
+    margin-right:1vw;
+}
+
+i.fab.fa-linkedin-in{
+    float:right;
+    padding-top:1vh;
+    margin-right:1vw;
+}
 
 
 

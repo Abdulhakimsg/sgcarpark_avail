@@ -18,7 +18,7 @@ var Layout = require('./components/layout');
         <Layout title="Hakim">
         <div className = 'all'>
         <h1 className = "results">Results</h1>
-          <h1 className = "totalNumber">Carparks Found: {totalNumber}</h1>
+          <h1 className = "totalNumber">Carpark Found: {totalNumber}</h1>
           <h1>{list}</h1>
         </div>
         </Layout>
