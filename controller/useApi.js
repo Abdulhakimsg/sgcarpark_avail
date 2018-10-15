@@ -1,5 +1,6 @@
 //Use request module
 const request = require('request');
+const compare = require('compare-lat-lon');
 
 //Use API + authenticate with API key
 var link = {
@@ -41,10 +42,43 @@ module.exports = () => {
       
     // Show by location
     const location = (req,res) =>{
-        console.log(req.query.lat);
-        console.log(req.query.lon)
 
-        res.render('location')
+        request(link,function(error,response,body) {
+            var coord = []
+            var rawLat = req.query.lat
+            var rawLon = req.query.lon
+            var myLat = parseFloat(rawLat).toFixed(5)
+            coord.push(myLat)
+            var myLon = parseFloat(rawLon).toFixed(5)
+            coord.push(myLon)
+            console.log("mylocation",coord)
+
+            
+            file_json = JSON.parse(body);
+            var array=file_json.value
+
+            var numberList = 0
+            var arrayList = []
+            
+            
+            for(var i = 0;i<array.length;i++){
+                var testActual=array[i].Location
+                var valuesActual= testActual.split(" ")
+                let distActual = 0.5
+                var answerActual = compare(coord[0],coord[1],valuesActual[0],valuesActual[1])
+
+                if(answerActual<distActual){
+                    // console.log(array[i])
+                    numberList += 1
+                    arrayList.push(array[i])
+                }
+            
+            }
+            // console.log("THIS IS THE LIST: " ,arrayList)
+            // console.log("TOTAL NUMBER: " , numberList)
+            res.render('location',{totalNumber:numberList, list:arrayList});
+        });
+       
     }
     
     //Show all
