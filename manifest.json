@@ -3,12 +3,12 @@
     "name": "SG Carpark",
     "icons": [
       {
-        "src": "/media/letterP.png",
+        "src": "/public/media/letterP.png",
         "type": "image/png",
         "sizes": "192x192"
       },
       {
-        "src": "/media/letterP.png",
+        "src": "/public/media/letterP.png",
         "type": "image/png",
         "sizes": "512x512"
       }
