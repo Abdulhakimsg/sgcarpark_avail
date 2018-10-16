@@ -63,7 +63,7 @@ module.exports = () => {
             for(var i = 0;i<array.length;i++){
                 var testActual=array[i].Location
                 var valuesActual= testActual.split(" ")
-                let distActual = 1.5//miles
+                let distActual = 1//miles
                 var answerActual = compare(coord[0],coord[1],valuesActual[0],valuesActual[1])
 
                 if(answerActual<distActual){
