@@ -22,6 +22,8 @@ require('./routes')(app);
 const jsonfile = require('jsonfile');
 
 //Listen to server
-app.listen(3000  , console.log ("Radio Check : I hear you loud and clear"));
+// app.listen(3000  , console.log ("Radio Check : I hear you loud and clear"));
 
+const PORT = process.env.PORT || 3000;
 
+const server = app.listen(PORT, () => console.log('~~~ Tuning in to the waves of port '+PORT+' ~~~'));
