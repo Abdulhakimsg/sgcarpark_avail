@@ -5,7 +5,7 @@ class Home extends React.Component {
   render() {
     return (
       <Layout title="Hakim" >
-      <div class = 'mainframe'>
+      <div className = 'mainframe'>
       <h2 id="findDevice">Find by Device Location</h2>
       
        <a className="btn btn-success" id="nearMe" href="location">Near me</a>
