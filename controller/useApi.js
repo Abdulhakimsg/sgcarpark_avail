@@ -44,12 +44,18 @@ module.exports = () => {
 
         request(link,function(error,response,body) {
             var coord = []
+
             var rawLat = req.query.lat
             var rawLon = req.query.lon
+
             var myLat = parseFloat(rawLat).toFixed(5)
+
             coord.push(myLat)
+
             var myLon = parseFloat(rawLon).toFixed(5)
+
             coord.push(myLon)
+            
             console.log("mylocation",coord)
 
             
