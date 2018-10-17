@@ -42,24 +42,27 @@ h2#findDevice{
 }
 
 h2#findStreet{
-    padding-top: 5vh;
     padding-bottom: 3vh;
     font-size:5vw;
     font-weight:250;
 }
 
 input#typeStreet{
-    width:30vw;
+    width:20vw;
 }
 
 input.circle{
-    margin-left:2vw;
-    margin-right:2vw;
+    margin-left:1vw;
+    margin-right:1vw;
 }
 label.radio{
     font-weight:800;
-    padding-right:2vw;
-    font-size:1.8vw;
+    padding-right:1vw;
+    font-size:1.2vw;
+}
+
+#submitBtn{
+    transform:scale(0.9);
 }
 
 div.all{
@@ -114,10 +117,6 @@ i.fab.fa-linkedin-in{
     padding-top:1vh;
     margin-right:1vw;
 }
-
-
-
-
 
 
 
