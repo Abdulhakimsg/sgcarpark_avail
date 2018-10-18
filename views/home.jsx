@@ -11,7 +11,7 @@ class Home extends React.Component {
        <a className="btn btn-success" id="nearMe" href="location">Near me</a>
         <div>
         <h2 id="findStreet" >Find by Street name & Vehicle Type</h2>
-        <div class = "myForm">
+        <div className = "myForm">
         <form action="/result" method="get">
             <input type="text" name="name" placeholder="Type Street name" id="typeStreet"/>
             <input type="radio" name="type" value="C" className="circle" defaultChecked />
