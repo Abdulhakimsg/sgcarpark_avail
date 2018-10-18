@@ -13,8 +13,8 @@ class Layout extends React.Component {
 		</head>
 		<body>
 		<a href = "https://www.github.com/abdulhakimsg" target="_blank"><i className="fab fa-github-square fa-1x"></i></a>
-			<a href = "https://www.abdulhakimchi@gmail.com" target="_blank">	<i className="fas fa-at fa-1x"></i></a>
-			<a href = "https://www.linkedin.com/abdulhakimsg" target="_blank"><i className="fab fa-linkedin-in fa-1x"></i></a>
+			<a href = "mailto:https://www.abdulhakimchi@gmail.com" target="_blank">	<i className="fas fa-at fa-1x"></i></a>
+			<a href = "https://www.linkedin.com/in/abdulhakimsg/" target="_blank"><i className="fab fa-linkedin-in fa-1x"></i></a>
 			{this.props.children}
 			<footer className = "w3-container">
 			<span id="bigHeading">Find a Carpark!</span>
